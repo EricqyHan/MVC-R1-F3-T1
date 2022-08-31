@@ -12,10 +12,10 @@ const todoRoutes = require('./routes/todos')
 
 require('dotenv').config({path: './config/.env'})
 
-// Passport config
+// Passport config 
 require('./config/passport')(passport)
 
-connectDB()
+connectDB() // Connect to the MongoDB database
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
